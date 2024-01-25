@@ -7,7 +7,8 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 
 function App() {
-  return (
+  return ( //utilizzo il Provider per inglobare le Routes dell'applicazione con Redux. In questo modo,
+  // i componenti possono accedere allo stato globale attraverso lo store
     <BrowserRouter>
       <Provider store={store}>
         <Routes>
