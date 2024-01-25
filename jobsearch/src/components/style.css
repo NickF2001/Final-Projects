@@ -42,6 +42,12 @@ body {
   font-weight: bold;
 }
 
+.comeback {
+  margin: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+
 @media (max-width: 500px) {
   .job-name, .job-company {
     font-size: 0.8rem;

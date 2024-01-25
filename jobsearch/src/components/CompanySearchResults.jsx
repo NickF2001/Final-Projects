@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCompanyJobs } from '../actions/actions';
 import './style.css'
+import Button from 'react-bootstrap/Button'
+import { Link } from 'react-router-dom'
 
 const CompanySearchResults = () => {
   const dispatch = useDispatch();
@@ -34,7 +36,15 @@ const CompanySearchResults = () => {
   return (
     <Container>
       <Row>
-        <Col className='my-3'>
+        <Col sm={1}>
+          <Button className='comeback'>
+            <Link to='/'>
+            <i className="fa-solid fa-arrow-left text-light"></i>
+          </Link>
+          </Button>
+        </Col>
+
+        <Col sm={11} className='my-3'>
           <h1 className='display-4 text-center'>Job posting for: {params.company}</h1>
           {companyJobs.map((jobData) => (
             <Job key={jobData._id} data={jobData} />
