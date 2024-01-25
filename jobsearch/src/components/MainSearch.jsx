@@ -40,15 +40,20 @@ const MainSearch = () => {
           <h1 className='display-1'>Remote Jobs Search</h1>
         </Col>
         <Col xs={10} className='mx-auto mb-4'>
+          <div className="search radius shadow p-3 text-center">
+            <p>What are you looking for?</p>
             <Form onSubmit={handleSubmit}>
-            <Form.Control
-              type='search'
-              value={query}
-              onChange={handleChange}
-              placeholder='Type and press Enter'
-              className='bg-light border-secondary radius p-3'
-            />
-          </Form>
+                <Form.Control
+                  type='search'
+                  value={query}
+                  onChange={handleChange}
+                  placeholder='Type and press Enter'
+                  className='bg-light radius p-3'
+                />
+            </Form>
+          </div>
+          
+            
         </Col>
         <Col xs={10} className='mx-auto mb-5'>
           {jobs.map((jobData) => (

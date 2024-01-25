@@ -26,3 +26,30 @@ body {
     padding: 8px 12px;
     border-radius: 15px;
 }
+
+.search {
+  background-color: #4e4e4e29;
+}
+
+.job-company, .job-name {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+
+.job-name a {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .job-name, .job-company {
+    font-size: 0.8rem;
+  }
+
+  .job-company {
+    padding-right: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
