@@ -121,7 +121,7 @@ function WeatherResults() {
               <p>Feels Like</p>
             </div>
             <div className="humidity mx-4">
-              {weather.main ? <p className="bold">{main.humidity}%</p> : null}
+              {main ? <p className="bold">{main.humidity}%</p> : null}
               <p>Humidity</p>
             </div>
             <div className="wind mx-4">
@@ -135,37 +135,31 @@ function WeatherResults() {
 
         {day != null && ( // Su diverse parti del codice utilizzo espressioni condizionali per decidere se visualizzare determinati elementi o no in base a date condizioni, come quello su questa riga
         // Questo aiuta a evitare errori quando i dati necessari sono undefined o non esistono, come per l'operatore ternario
-          <div className="forecast">
-            <div className="day  mx-4">
-              <div>
+          <div className="forecast d-flex gap-1">
+            <div className="day">
                 <img
                   src={`./src/assets/${day[8]?.weather[0].icon}.png`}
                   alt=""
                   height={90}
                 />
-              </div>
               <p>{day[8]?.dt_txt.slice(0, 10)}</p>
             </div>
 
-            <div className="day  mx-4">
-              <div>
+            <div className="day">
                 <img
                   src={`./src/assets/${day[16]?.weather[0].icon}.png`}
                   alt=""
                   height={90}
                 />
-              </div>
               <p>{day[16]?.dt_txt.slice(0, 10)}</p>
             </div>
 
-            <div className="day mx-4">
-              <div>
+            <div className="day">
                 <img
                   src={`./src/assets/${day[24]?.weather[0].icon}.png`}
                   alt=""
                   height={90}
                 />
-              </div>
               <p>{day[24]?.dt_txt.slice(0, 10)}</p>
             </div>
           </div>

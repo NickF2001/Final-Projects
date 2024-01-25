@@ -4,7 +4,7 @@ import "./WeatherResults.css";
 
 const MainHome = () => { // Definisco il componente che sarà il main della hompage
     return (
-        <div className="app text-center">
+        <div className="app home text-center">
             <h1>Weather App</h1>
             <p>Search your location here</p>
             <Button className='m-0 p-0'><Link className='btn' type='button' to='/searchpage'><i className="fa-solid fa-magnifying-glass"></i></Link></Button>
